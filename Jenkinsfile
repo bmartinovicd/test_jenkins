@@ -75,6 +75,12 @@ pipeline {
                 }
             }
         }
+		stage('Dynamic') {
+            steps {
+                echo (message: "DYNAMIC")
+                
+            }
+        }
         stage('Publish') {
             steps {
                 echo (message: "Publish")
