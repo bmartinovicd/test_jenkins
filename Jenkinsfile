@@ -76,6 +76,10 @@ pipeline {
             }
         }
 		stage('Dynamic') {
+			when {
+                equals expected: "feature/multi/*",
+                actual: params.GIT_BRANCH
+            }
             steps {
                 echo (message: "DYNAMIC")
                 
